@@ -1,0 +1,21 @@
+# Entorno virtual local y dependencias globales
+env/
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# IDEs y Editores
+.vscode/
+.idea/
+.DS_Store
+
+# Archivos de Datos y Modelos (?Muy importante para no saturar el repo!)
+*.csv
+*.json
+*.jsonl
+*.bin
+*.pt
+*.safetensors
+logs/
+outputs/
