@@ -12,10 +12,9 @@ __pycache__/
 
 # Archivos de Datos y Modelos (?Muy importante para no saturar el repo!)
 *.csv
-*.json
 *.jsonl
 *.bin
 *.pt
 *.safetensors
 logs/
-outputs/
+

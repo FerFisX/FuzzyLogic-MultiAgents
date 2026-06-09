@@ -1,0 +1,2402 @@
+[
+  {
+    "task_id": "TASK-007",
+    "prompt": "[Variación #007] Deadlock detectado en transacciones concurrentes con index corruption.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 66.74,
+      "uncertainty_ir": 0.51,
+      "response_length_chars": 306,
+      "latency_ms": 5.12
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-011",
+    "prompt": "[Variación #011] Error intermitente en el pipeline de despliegue debido a configuraciones de permisos.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.37,
+      "uncertainty_ir": 0.31,
+      "response_length_chars": 184,
+      "latency_ms": 5.66
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-004",
+    "prompt": "[Variación #004] Spike crítico en tcp retransmission rate causando caídas de handshake SSL.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.71,
+      "uncertainty_ir": 0.45,
+      "response_length_chars": 271,
+      "latency_ms": 2.58
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-002",
+    "prompt": "[Variación #002] Optimizar query SQL lenta que genera cuellos de botella en los logs de auditoría.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 29.68,
+      "uncertainty_ir": 0.48,
+      "response_length_chars": 286,
+      "latency_ms": 1.51
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-013",
+    "prompt": "[Variación #013] Spike crítico en tcp retransmission rate causando caídas de handshake SSL.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.71,
+      "uncertainty_ir": 0.51,
+      "response_length_chars": 304,
+      "latency_ms": 2.4
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-006",
+    "prompt": "[Variación #006] ¿Cómo puedo verificar el estado actual del servicio local?",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 19.94,
+      "uncertainty_ir": 0.38,
+      "response_length_chars": 226,
+      "latency_ms": 12.49
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-003",
+    "prompt": "[Variación #003] Ayuda para reiniciar de forma segura el contenedor de logs.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.46,
+      "uncertainty_ir": 0.51,
+      "response_length_chars": 308,
+      "latency_ms": 1.18
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-012",
+    "prompt": "[Variación #012] Ayuda para reiniciar de forma segura el contenedor de logs.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.46,
+      "uncertainty_ir": 0.34,
+      "response_length_chars": 203,
+      "latency_ms": 6.24
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-005",
+    "prompt": "[Variación #005] Optimizar query SQL lenta que genera cuellos de botella en los logs de auditoría.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 29.68,
+      "uncertainty_ir": 0.48,
+      "response_length_chars": 291,
+      "latency_ms": 1.9
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-009",
+    "prompt": "[Variación #009] Listar las versiones activas del software en el clúster de infraestructura.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.95,
+      "uncertainty_ir": 0.32,
+      "response_length_chars": 189,
+      "latency_ms": 1.07
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-010",
+    "prompt": "[Variación #010] Deadlock detectado en transacciones concurrentes con index corruption.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 66.74,
+      "uncertainty_ir": 0.48,
+      "response_length_chars": 289,
+      "latency_ms": 7.41
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-014",
+    "prompt": "[Variación #014] Error intermitente en el pipeline de despliegue debido a configuraciones de permisos.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.37,
+      "uncertainty_ir": 0.48,
+      "response_length_chars": 289,
+      "latency_ms": 7.38
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-001",
+    "prompt": "[Variación #001] Spike crítico en tcp retransmission rate causando caídas de handshake SSL.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.71,
+      "uncertainty_ir": 0.31,
+      "response_length_chars": 184,
+      "latency_ms": 7.28
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-019",
+    "prompt": "[Variación #019] Spike crítico en tcp retransmission rate causando caídas de handshake SSL.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.71,
+      "uncertainty_ir": 0.44,
+      "response_length_chars": 266,
+      "latency_ms": 1.24
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-008",
+    "prompt": "[Variación #008] Optimizar query SQL lenta que genera cuellos de botella en los logs de auditoría.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 29.68,
+      "uncertainty_ir": 0.43,
+      "response_length_chars": 259,
+      "latency_ms": 9.19
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-018",
+    "prompt": "[Variación #018] Chequeo básico de salud del sistema mediante ping de red.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.14,
+      "uncertainty_ir": 0.5,
+      "response_length_chars": 301,
+      "latency_ms": 4.74
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-021",
+    "prompt": "[Variación #021] ¿Cómo puedo verificar el estado actual del servicio local?",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 19.94,
+      "uncertainty_ir": 0.33,
+      "response_length_chars": 198,
+      "latency_ms": 1.02
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-022",
+    "prompt": "[Variación #022] Fuga de memoria (memory leak) severa identificada tras cascade delete en base de datos.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 58.65,
+      "uncertainty_ir": 0.43,
+      "response_length_chars": 261,
+      "latency_ms": 1.11
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-015",
+    "prompt": "[Variación #015] Chequeo básico de salud del sistema mediante ping de red.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.14,
+      "uncertainty_ir": 0.4,
+      "response_length_chars": 241,
+      "latency_ms": 9.81
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-024",
+    "prompt": "[Variación #024] Ayuda para reiniciar de forma segura el contenedor de logs.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.46,
+      "uncertainty_ir": 0.31,
+      "response_length_chars": 188,
+      "latency_ms": 1.14
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-025",
+    "prompt": "[Variación #025] Replication lag superior a 5000ms con violaciones de consistencia eventual.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 38.6,
+      "uncertainty_ir": 0.52,
+      "response_length_chars": 309,
+      "latency_ms": 3.22
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-020",
+    "prompt": "[Variación #020] Optimizar query SQL lenta que genera cuellos de botella en los logs de auditoría.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 29.68,
+      "uncertainty_ir": 0.33,
+      "response_length_chars": 198,
+      "latency_ms": 11.02
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-030",
+    "prompt": "[Variación #030] Chequeo básico de salud del sistema mediante ping de red.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.14,
+      "uncertainty_ir": 0.36,
+      "response_length_chars": 218,
+      "latency_ms": 0.98
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-026",
+    "prompt": "[Variación #026] Fallo de conexión por certificados vencidos en el entorno de pruebas.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 20.45,
+      "uncertainty_ir": 0.48,
+      "response_length_chars": 291,
+      "latency_ms": 5.65
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-016",
+    "prompt": "[Variación #016] Replication lag superior a 5000ms con violaciones de consistencia eventual.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 38.6,
+      "uncertainty_ir": 0.41,
+      "response_length_chars": 244,
+      "latency_ms": 19.0
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-033",
+    "prompt": "[Variación #033] Listar las versiones activas del software en el clúster de infraestructura.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.95,
+      "uncertainty_ir": 0.47,
+      "response_length_chars": 279,
+      "latency_ms": 1.03
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-023",
+    "prompt": "[Variación #023] La caché del servidor de base de datos reporta baja tasa de aciertos (hit rate).",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 17.14,
+      "uncertainty_ir": 0.51,
+      "response_length_chars": 304,
+      "latency_ms": 13.01
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-027",
+    "prompt": "[Variación #027] ¿Cómo puedo verificar el estado actual del servicio local?",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 19.94,
+      "uncertainty_ir": 0.38,
+      "response_length_chars": 226,
+      "latency_ms": 11.04
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-036",
+    "prompt": "[Variación #036] ¿Cómo puedo verificar el estado actual del servicio local?",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 19.94,
+      "uncertainty_ir": 0.42,
+      "response_length_chars": 251,
+      "latency_ms": 1.0
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-017",
+    "prompt": "[Variación #017] La caché del servidor de base de datos reporta baja tasa de aciertos (hit rate).",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 17.14,
+      "uncertainty_ir": 0.34,
+      "response_length_chars": 203,
+      "latency_ms": 24.43
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-038",
+    "prompt": "[Variación #038] Fallo de conexión por certificados vencidos en el entorno de pruebas.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 20.45,
+      "uncertainty_ir": 0.33,
+      "response_length_chars": 196,
+      "latency_ms": 0.88
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-039",
+    "prompt": "[Variación #039] Listar las versiones activas del software en el clúster de infraestructura.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.95,
+      "uncertainty_ir": 0.4,
+      "response_length_chars": 238,
+      "latency_ms": 0.87
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-031",
+    "prompt": "[Variación #031] Error de segmentación (segfault) intermitente en el kernel de ejecución.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 45.69,
+      "uncertainty_ir": 0.31,
+      "response_length_chars": 184,
+      "latency_ms": 11.99
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-032",
+    "prompt": "[Variación #032] La caché del servidor de base de datos reporta baja tasa de aciertos (hit rate).",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 17.14,
+      "uncertainty_ir": 0.46,
+      "response_length_chars": 274,
+      "latency_ms": 11.87
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-029",
+    "prompt": "[Variación #029] Fallo de conexión por certificados vencidos en el entorno de pruebas.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 20.45,
+      "uncertainty_ir": 0.49,
+      "response_length_chars": 294,
+      "latency_ms": 16.44
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-040",
+    "prompt": "[Variación #040] Fuga de memoria (memory leak) severa identificada tras cascade delete en base de datos.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 58.65,
+      "uncertainty_ir": 0.44,
+      "response_length_chars": 264,
+      "latency_ms": 5.18
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-035",
+    "prompt": "[Variación #035] Excepción de timeout en la API de autenticación del contenedor de servicios.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.67,
+      "uncertainty_ir": 0.39,
+      "response_length_chars": 234,
+      "latency_ms": 12.03
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-045",
+    "prompt": "[Variación #045] Listar las versiones activas del software en el clúster de infraestructura.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.95,
+      "uncertainty_ir": 0.51,
+      "response_length_chars": 303,
+      "latency_ms": 0.92
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-028",
+    "prompt": "[Variación #028] Replication lag superior a 5000ms con violaciones de consistencia eventual.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 38.6,
+      "uncertainty_ir": 0.48,
+      "response_length_chars": 289,
+      "latency_ms": 23.24
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-047",
+    "prompt": "[Variación #047] Optimizar query SQL lenta que genera cuellos de botella en los logs de auditoría.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 29.68,
+      "uncertainty_ir": 0.44,
+      "response_length_chars": 264,
+      "latency_ms": 0.89
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-034",
+    "prompt": "[Variación #034] Deadlock detectado en transacciones concurrentes con index corruption.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 66.74,
+      "uncertainty_ir": 0.38,
+      "response_length_chars": 228,
+      "latency_ms": 20.3
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-042",
+    "prompt": "[Variación #042] Chequeo básico de salud del sistema mediante ping de red.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.14,
+      "uncertainty_ir": 0.36,
+      "response_length_chars": 218,
+      "latency_ms": 14.62
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-051",
+    "prompt": "[Variación #051] Listar las versiones activas del software en el clúster de infraestructura.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.95,
+      "uncertainty_ir": 0.46,
+      "response_length_chars": 278,
+      "latency_ms": 1.09
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-043",
+    "prompt": "[Variación #043] Error de segmentación (segfault) intermitente en el kernel de ejecución.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 45.69,
+      "uncertainty_ir": 0.51,
+      "response_length_chars": 306,
+      "latency_ms": 17.13
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-053",
+    "prompt": "[Variación #053] La caché del servidor de base de datos reporta baja tasa de aciertos (hit rate).",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 17.14,
+      "uncertainty_ir": 0.41,
+      "response_length_chars": 246,
+      "latency_ms": 1.09
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-044",
+    "prompt": "[Variación #044] La caché del servidor de base de datos reporta baja tasa de aciertos (hit rate).",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 17.14,
+      "uncertainty_ir": 0.39,
+      "response_length_chars": 233,
+      "latency_ms": 17.3
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-041",
+    "prompt": "[Variación #041] Error intermitente en el pipeline de despliegue debido a configuraciones de permisos.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.37,
+      "uncertainty_ir": 0.35,
+      "response_length_chars": 213,
+      "latency_ms": 23.76
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-052",
+    "prompt": "[Variación #052] Replication lag superior a 5000ms con violaciones de consistencia eventual.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 38.6,
+      "uncertainty_ir": 0.53,
+      "response_length_chars": 316,
+      "latency_ms": 8.93
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-037",
+    "prompt": "[Variación #037] Error de segmentación (segfault) intermitente en el kernel de ejecución.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 45.69,
+      "uncertainty_ir": 0.45,
+      "response_length_chars": 269,
+      "latency_ms": 31.62
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-059",
+    "prompt": "[Variación #059] La caché del servidor de base de datos reporta baja tasa de aciertos (hit rate).",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 17.14,
+      "uncertainty_ir": 0.42,
+      "response_length_chars": 253,
+      "latency_ms": 1.75
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-056",
+    "prompt": "[Variación #056] Excepción de timeout en la API de autenticación del contenedor de servicios.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.67,
+      "uncertainty_ir": 0.32,
+      "response_length_chars": 191,
+      "latency_ms": 6.8
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-057",
+    "prompt": "[Variación #057] ¿Cómo puedo verificar el estado actual del servicio local?",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 19.94,
+      "uncertainty_ir": 0.46,
+      "response_length_chars": 273,
+      "latency_ms": 9.43
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-062",
+    "prompt": "[Variación #062] La caché del servidor de base de datos reporta baja tasa de aciertos (hit rate).",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 17.14,
+      "uncertainty_ir": 0.32,
+      "response_length_chars": 193,
+      "latency_ms": 1.12
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-054",
+    "prompt": "[Variación #054] Listar las versiones activas del software en el clúster de infraestructura.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.95,
+      "uncertainty_ir": 0.41,
+      "response_length_chars": 243,
+      "latency_ms": 14.95
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-064",
+    "prompt": "[Variación #064] Replication lag superior a 5000ms con violaciones de consistencia eventual.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 38.6,
+      "uncertainty_ir": 0.45,
+      "response_length_chars": 269,
+      "latency_ms": 1.01
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-048",
+    "prompt": "[Variación #048] Listar las versiones activas del software en el clúster de infraestructura.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.95,
+      "uncertainty_ir": 0.44,
+      "response_length_chars": 266,
+      "latency_ms": 29.34
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-066",
+    "prompt": "[Variación #066] Ayuda para reiniciar de forma segura el contenedor de logs.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.46,
+      "uncertainty_ir": 0.45,
+      "response_length_chars": 268,
+      "latency_ms": 0.97
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-049",
+    "prompt": "[Variación #049] Deadlock detectado en transacciones concurrentes con index corruption.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 66.74,
+      "uncertainty_ir": 0.51,
+      "response_length_chars": 303,
+      "latency_ms": 27.14
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-068",
+    "prompt": "[Variación #068] Excepción de timeout en la API de autenticación del contenedor de servicios.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.67,
+      "uncertainty_ir": 0.43,
+      "response_length_chars": 259,
+      "latency_ms": 0.95
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-055",
+    "prompt": "[Variación #055] Fuga de memoria (memory leak) severa identificada tras cascade delete en base de datos.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 58.65,
+      "uncertainty_ir": 0.46,
+      "response_length_chars": 274,
+      "latency_ms": 19.98
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-070",
+    "prompt": "[Variación #070] Deadlock detectado en transacciones concurrentes con index corruption.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 66.74,
+      "uncertainty_ir": 0.5,
+      "response_length_chars": 299,
+      "latency_ms": 1.03
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-065",
+    "prompt": "[Variación #065] Error intermitente en el pipeline de despliegue debido a configuraciones de permisos.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.37,
+      "uncertainty_ir": 0.42,
+      "response_length_chars": 254,
+      "latency_ms": 7.72
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-072",
+    "prompt": "[Variación #072] Listar las versiones activas del software en el clúster de infraestructura.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.95,
+      "uncertainty_ir": 0.41,
+      "response_length_chars": 246,
+      "latency_ms": 1.39
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-046",
+    "prompt": "[Variación #046] Deadlock detectado en transacciones concurrentes con index corruption.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 66.74,
+      "uncertainty_ir": 0.47,
+      "response_length_chars": 284,
+      "latency_ms": 40.41
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-074",
+    "prompt": "[Variación #074] Error intermitente en el pipeline de despliegue debido a configuraciones de permisos.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.37,
+      "uncertainty_ir": 0.48,
+      "response_length_chars": 286,
+      "latency_ms": 1.03
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-069",
+    "prompt": "[Variación #069] ¿Cómo puedo verificar el estado actual del servicio local?",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 19.94,
+      "uncertainty_ir": 0.39,
+      "response_length_chars": 231,
+      "latency_ms": 8.67
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-076",
+    "prompt": "[Variación #076] Fuga de memoria (memory leak) severa identificada tras cascade delete en base de datos.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 58.65,
+      "uncertainty_ir": 0.44,
+      "response_length_chars": 263,
+      "latency_ms": 1.03
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-077",
+    "prompt": "[Variación #077] Excepción de timeout en la API de autenticación del contenedor de servicios.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.67,
+      "uncertainty_ir": 0.49,
+      "response_length_chars": 294,
+      "latency_ms": 1.59
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-058",
+    "prompt": "[Variación #058] Fuga de memoria (memory leak) severa identificada tras cascade delete en base de datos.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 58.65,
+      "uncertainty_ir": 0.53,
+      "response_length_chars": 316,
+      "latency_ms": 26.99
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-061",
+    "prompt": "[Variación #061] Fuga de memoria (memory leak) severa identificada tras cascade delete en base de datos.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 58.65,
+      "uncertainty_ir": 0.37,
+      "response_length_chars": 221,
+      "latency_ms": 24.43
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-080",
+    "prompt": "[Variación #080] Error intermitente en el pipeline de despliegue debido a configuraciones de permisos.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.37,
+      "uncertainty_ir": 0.34,
+      "response_length_chars": 204,
+      "latency_ms": 1.15
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-071",
+    "prompt": "[Variación #071] Optimizar query SQL lenta que genera cuellos de botella en los logs de auditoría.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 29.68,
+      "uncertainty_ir": 0.48,
+      "response_length_chars": 291,
+      "latency_ms": 13.61
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-082",
+    "prompt": "[Variación #082] Error de segmentación (segfault) intermitente en el kernel de ejecución.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 45.69,
+      "uncertainty_ir": 0.45,
+      "response_length_chars": 268,
+      "latency_ms": 1.04
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-079",
+    "prompt": "[Variación #079] Deadlock detectado en transacciones concurrentes con index corruption.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 66.74,
+      "uncertainty_ir": 0.45,
+      "response_length_chars": 268,
+      "latency_ms": 6.6
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-084",
+    "prompt": "[Variación #084] Listar las versiones activas del software en el clúster de infraestructura.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.95,
+      "uncertainty_ir": 0.41,
+      "response_length_chars": 246,
+      "latency_ms": 1.05
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-067",
+    "prompt": "[Variación #067] Error de segmentación (segfault) intermitente en el kernel de ejecución.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 45.69,
+      "uncertainty_ir": 0.41,
+      "response_length_chars": 249,
+      "latency_ms": 24.0
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-086",
+    "prompt": "[Variación #086] La caché del servidor de base de datos reporta baja tasa de aciertos (hit rate).",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 17.14,
+      "uncertainty_ir": 0.41,
+      "response_length_chars": 243,
+      "latency_ms": 1.57
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-087",
+    "prompt": "[Variación #087] Ayuda para reiniciar de forma segura el contenedor de logs.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.46,
+      "uncertainty_ir": 0.32,
+      "response_length_chars": 191,
+      "latency_ms": 1.02
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-050",
+    "prompt": "[Variación #050] La caché del servidor de base de datos reporta baja tasa de aciertos (hit rate).",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 17.14,
+      "uncertainty_ir": 0.39,
+      "response_length_chars": 231,
+      "latency_ms": 57.38
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-089",
+    "prompt": "[Variación #089] Fallo de conexión por certificados vencidos en el entorno de pruebas.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 20.45,
+      "uncertainty_ir": 0.5,
+      "response_length_chars": 299,
+      "latency_ms": 1.08
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-078",
+    "prompt": "[Variación #078] Listar las versiones activas del software en el clúster de infraestructura.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.95,
+      "uncertainty_ir": 0.35,
+      "response_length_chars": 208,
+      "latency_ms": 23.03
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-091",
+    "prompt": "[Variación #091] Fuga de memoria (memory leak) severa identificada tras cascade delete en base de datos.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 58.65,
+      "uncertainty_ir": 0.47,
+      "response_length_chars": 279,
+      "latency_ms": 1.14
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-085",
+    "prompt": "[Variación #085] Fuga de memoria (memory leak) severa identificada tras cascade delete en base de datos.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 58.65,
+      "uncertainty_ir": 0.38,
+      "response_length_chars": 228,
+      "latency_ms": 17.85
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-073",
+    "prompt": "[Variación #073] Deadlock detectado en transacciones concurrentes con index corruption.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 66.74,
+      "uncertainty_ir": 0.48,
+      "response_length_chars": 289,
+      "latency_ms": 34.58
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-094",
+    "prompt": "[Variación #094] Replication lag superior a 5000ms con violaciones de consistencia eventual.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 38.6,
+      "uncertainty_ir": 0.4,
+      "response_length_chars": 241,
+      "latency_ms": 1.3
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-088",
+    "prompt": "[Variación #088] Spike crítico en tcp retransmission rate causando caídas de handshake SSL.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.71,
+      "uncertainty_ir": 0.35,
+      "response_length_chars": 213,
+      "latency_ms": 17.62
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-092",
+    "prompt": "[Variación #092] Optimizar query SQL lenta que genera cuellos de botella en los logs de auditoría.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 29.68,
+      "uncertainty_ir": 0.52,
+      "response_length_chars": 309,
+      "latency_ms": 8.37
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-097",
+    "prompt": "[Variación #097] Fuga de memoria (memory leak) severa identificada tras cascade delete en base de datos.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 58.65,
+      "uncertainty_ir": 0.43,
+      "response_length_chars": 256,
+      "latency_ms": 1.06
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-063",
+    "prompt": "[Variación #063] ¿Cómo puedo verificar el estado actual del servicio local?",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 19.94,
+      "uncertainty_ir": 0.46,
+      "response_length_chars": 276,
+      "latency_ms": 52.43
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-093",
+    "prompt": "[Variación #093] Listar las versiones activas del software en el clúster de infraestructura.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.95,
+      "uncertainty_ir": 0.32,
+      "response_length_chars": 191,
+      "latency_ms": 9.41
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-075",
+    "prompt": "[Variación #075] Chequeo básico de salud del sistema mediante ping de red.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.14,
+      "uncertainty_ir": 0.47,
+      "response_length_chars": 279,
+      "latency_ms": 41.95
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-101",
+    "prompt": "[Variación #101] Optimizar query SQL lenta que genera cuellos de botella en los logs de auditoría.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 29.68,
+      "uncertainty_ir": 0.5,
+      "response_length_chars": 299,
+      "latency_ms": 1.04
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-060",
+    "prompt": "[Variación #060] Chequeo básico de salud del sistema mediante ping de red.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.14,
+      "uncertainty_ir": 0.39,
+      "response_length_chars": 236,
+      "latency_ms": 62.55
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-103",
+    "prompt": "[Variación #103] Deadlock detectado en transacciones concurrentes con index corruption.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 66.74,
+      "uncertainty_ir": 0.36,
+      "response_length_chars": 214,
+      "latency_ms": 1.02
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-104",
+    "prompt": "[Variación #104] Fallo de conexión por certificados vencidos en el entorno de pruebas.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 20.45,
+      "uncertainty_ir": 0.43,
+      "response_length_chars": 259,
+      "latency_ms": 3.5
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-090",
+    "prompt": "[Variación #090] Chequeo básico de salud del sistema mediante ping de red.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.14,
+      "uncertainty_ir": 0.51,
+      "response_length_chars": 308,
+      "latency_ms": 24.71
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-106",
+    "prompt": "[Variación #106] Error de segmentación (segfault) intermitente en el kernel de ejecución.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 45.69,
+      "uncertainty_ir": 0.39,
+      "response_length_chars": 234,
+      "latency_ms": 1.56
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-100",
+    "prompt": "[Variación #100] Fuga de memoria (memory leak) severa identificada tras cascade delete en base de datos.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 58.65,
+      "uncertainty_ir": 0.31,
+      "response_length_chars": 188,
+      "latency_ms": 21.99
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-102",
+    "prompt": "[Variación #102] Mostrar los logs de auditoría generados en los últimos 10 minutos.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.5,
+      "uncertainty_ir": 0.42,
+      "response_length_chars": 251,
+      "latency_ms": 22.88
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-098",
+    "prompt": "[Variación #098] Excepción de timeout en la API de autenticación del contenedor de servicios.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.67,
+      "uncertainty_ir": 0.44,
+      "response_length_chars": 263,
+      "latency_ms": 29.97
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-083",
+    "prompt": "[Variación #083] Optimizar query SQL lenta que genera cuellos de botella en los logs de auditoría.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 29.68,
+      "uncertainty_ir": 0.39,
+      "response_length_chars": 236,
+      "latency_ms": 59.7
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-111",
+    "prompt": "[Variación #111] Listar las versiones activas del software en el clúster de infraestructura.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.95,
+      "uncertainty_ir": 0.35,
+      "response_length_chars": 213,
+      "latency_ms": 1.44
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-081",
+    "prompt": "[Variación #081] Chequeo básico de salud del sistema mediante ping de red.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.14,
+      "uncertainty_ir": 0.34,
+      "response_length_chars": 201,
+      "latency_ms": 64.51
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-113",
+    "prompt": "[Variación #113] Excepción de timeout en la API de autenticación del contenedor de servicios.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.67,
+      "uncertainty_ir": 0.4,
+      "response_length_chars": 238,
+      "latency_ms": 1.07
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-099",
+    "prompt": "[Variación #099] Ayuda para reiniciar de forma segura el contenedor de logs.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.46,
+      "uncertainty_ir": 0.32,
+      "response_length_chars": 191,
+      "latency_ms": 37.51
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-096",
+    "prompt": "[Variación #096] Ayuda para reiniciar de forma segura el contenedor de logs.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.46,
+      "uncertainty_ir": 0.43,
+      "response_length_chars": 259,
+      "latency_ms": 42.92
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-116",
+    "prompt": "[Variación #116] Fallo de conexión por certificados vencidos en el entorno de pruebas.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 20.45,
+      "uncertainty_ir": 0.37,
+      "response_length_chars": 224,
+      "latency_ms": 1.18
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-095",
+    "prompt": "[Variación #095] Error intermitente en el pipeline de despliegue debido a configuraciones de permisos.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.37,
+      "uncertainty_ir": 0.32,
+      "response_length_chars": 189,
+      "latency_ms": 50.4
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-110",
+    "prompt": "[Variación #110] Fallo de conexión por certificados vencidos en el entorno de pruebas.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 20.45,
+      "uncertainty_ir": 0.38,
+      "response_length_chars": 229,
+      "latency_ms": 17.53
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-119",
+    "prompt": "[Variación #119] Excepción de timeout en la API de autenticación del contenedor de servicios.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.67,
+      "uncertainty_ir": 0.4,
+      "response_length_chars": 241,
+      "latency_ms": 1.08
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-112",
+    "prompt": "[Variación #112] Replication lag superior a 5000ms con violaciones de consistencia eventual.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 38.6,
+      "uncertainty_ir": 0.42,
+      "response_length_chars": 254,
+      "latency_ms": 16.78
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-109",
+    "prompt": "[Variación #109] Error de segmentación (segfault) intermitente en el kernel de ejecución.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 45.69,
+      "uncertainty_ir": 0.36,
+      "response_length_chars": 218,
+      "latency_ms": 22.86
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-122",
+    "prompt": "[Variación #122] Error intermitente en el pipeline de despliegue debido a configuraciones de permisos.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.37,
+      "uncertainty_ir": 0.43,
+      "response_length_chars": 261,
+      "latency_ms": 1.16
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-108",
+    "prompt": "[Variación #108] Ayuda para reiniciar de forma segura el contenedor de logs.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.46,
+      "uncertainty_ir": 0.36,
+      "response_length_chars": 218,
+      "latency_ms": 30.77
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-118",
+    "prompt": "[Variación #118] Replication lag superior a 5000ms con violaciones de consistencia eventual.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 38.6,
+      "uncertainty_ir": 0.36,
+      "response_length_chars": 218,
+      "latency_ms": 10.3
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-125",
+    "prompt": "[Variación #125] Error intermitente en el pipeline de despliegue debido a configuraciones de permisos.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.37,
+      "uncertainty_ir": 0.4,
+      "response_length_chars": 238,
+      "latency_ms": 1.13
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-126",
+    "prompt": "[Variación #126] Listar las versiones activas del software en el clúster de infraestructura.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.95,
+      "uncertainty_ir": 0.39,
+      "response_length_chars": 233,
+      "latency_ms": 1.0
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-114",
+    "prompt": "[Variación #114] Ayuda para reiniciar de forma segura el contenedor de logs.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.46,
+      "uncertainty_ir": 0.5,
+      "response_length_chars": 298,
+      "latency_ms": 24.49
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-128",
+    "prompt": "[Variación #128] Excepción de timeout en la API de autenticación del contenedor de servicios.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.67,
+      "uncertainty_ir": 0.52,
+      "response_length_chars": 309,
+      "latency_ms": 1.34
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-105",
+    "prompt": "[Variación #105] Ayuda para reiniciar de forma segura el contenedor de logs.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.46,
+      "uncertainty_ir": 0.44,
+      "response_length_chars": 263,
+      "latency_ms": 52.25
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-130",
+    "prompt": "[Variación #130] Deadlock detectado en transacciones concurrentes con index corruption.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 66.74,
+      "uncertainty_ir": 0.52,
+      "response_length_chars": 313,
+      "latency_ms": 1.23
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-131",
+    "prompt": "[Variación #131] Excepción de timeout en la API de autenticación del contenedor de servicios.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.67,
+      "uncertainty_ir": 0.31,
+      "response_length_chars": 188,
+      "latency_ms": 1.03
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-115",
+    "prompt": "[Variación #115] Replication lag superior a 5000ms con violaciones de consistencia eventual.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 38.6,
+      "uncertainty_ir": 0.46,
+      "response_length_chars": 273,
+      "latency_ms": 29.38
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-133",
+    "prompt": "[Variación #133] Spike crítico en tcp retransmission rate causando caídas de handshake SSL.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.71,
+      "uncertainty_ir": 0.44,
+      "response_length_chars": 263,
+      "latency_ms": 1.05
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-127",
+    "prompt": "[Variación #127] Fuga de memoria (memory leak) severa identificada tras cascade delete en base de datos.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 58.65,
+      "uncertainty_ir": 0.47,
+      "response_length_chars": 284,
+      "latency_ms": 12.34
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-135",
+    "prompt": "[Variación #135] Chequeo básico de salud del sistema mediante ping de red.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.14,
+      "uncertainty_ir": 0.44,
+      "response_length_chars": 266,
+      "latency_ms": 1.01
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-107",
+    "prompt": "[Variación #107] Optimizar query SQL lenta que genera cuellos de botella en los logs de auditoría.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 29.68,
+      "uncertainty_ir": 0.46,
+      "response_length_chars": 273,
+      "latency_ms": 58.76
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-129",
+    "prompt": "[Variación #129] Ayuda para reiniciar de forma segura el contenedor de logs.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.46,
+      "uncertainty_ir": 0.35,
+      "response_length_chars": 213,
+      "latency_ms": 12.43
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-117",
+    "prompt": "[Variación #117] Listar las versiones activas del software en el clúster de infraestructura.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.95,
+      "uncertainty_ir": 0.43,
+      "response_length_chars": 256,
+      "latency_ms": 33.2
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-121",
+    "prompt": "[Variación #121] Deadlock detectado en transacciones concurrentes con index corruption.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 66.74,
+      "uncertainty_ir": 0.4,
+      "response_length_chars": 241,
+      "latency_ms": 26.27
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-124",
+    "prompt": "[Variación #124] Replication lag superior a 5000ms con violaciones de consistencia eventual.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 38.6,
+      "uncertainty_ir": 0.45,
+      "response_length_chars": 268,
+      "latency_ms": 22.48
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-123",
+    "prompt": "[Variación #123] ¿Cómo puedo verificar el estado actual del servicio local?",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 19.94,
+      "uncertainty_ir": 0.52,
+      "response_length_chars": 311,
+      "latency_ms": 26.5
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-132",
+    "prompt": "[Variación #132] Chequeo básico de salud del sistema mediante ping de red.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.14,
+      "uncertainty_ir": 0.47,
+      "response_length_chars": 281,
+      "latency_ms": 13.99
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-137",
+    "prompt": "[Variación #137] La caché del servidor de base de datos reporta baja tasa de aciertos (hit rate).",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 17.14,
+      "uncertainty_ir": 0.41,
+      "response_length_chars": 243,
+      "latency_ms": 8.2
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-138",
+    "prompt": "[Variación #138] ¿Cómo puedo verificar el estado actual del servicio local?",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 19.94,
+      "uncertainty_ir": 0.4,
+      "response_length_chars": 241,
+      "latency_ms": 7.84
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-139",
+    "prompt": "[Variación #139] Error de segmentación (segfault) intermitente en el kernel de ejecución.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 45.69,
+      "uncertainty_ir": 0.43,
+      "response_length_chars": 261,
+      "latency_ms": 8.29
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-146",
+    "prompt": "[Variación #146] Error intermitente en el pipeline de despliegue debido a configuraciones de permisos.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.37,
+      "uncertainty_ir": 0.41,
+      "response_length_chars": 246,
+      "latency_ms": 1.32
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-120",
+    "prompt": "[Variación #120] Listar las versiones activas del software en el clúster de infraestructura.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.95,
+      "uncertainty_ir": 0.32,
+      "response_length_chars": 189,
+      "latency_ms": 37.57
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-148",
+    "prompt": "[Variación #148] Spike crítico en tcp retransmission rate causando caídas de handshake SSL.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.71,
+      "uncertainty_ir": 0.41,
+      "response_length_chars": 246,
+      "latency_ms": 1.01
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-142",
+    "prompt": "[Variación #142] Fuga de memoria (memory leak) severa identificada tras cascade delete en base de datos.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 58.65,
+      "uncertainty_ir": 0.48,
+      "response_length_chars": 289,
+      "latency_ms": 10.26
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-140",
+    "prompt": "[Variación #140] Excepción de timeout en la API de autenticación del contenedor de servicios.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.67,
+      "uncertainty_ir": 0.52,
+      "response_length_chars": 313,
+      "latency_ms": 14.81
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-145",
+    "prompt": "[Variación #145] Spike crítico en tcp retransmission rate causando caídas de handshake SSL.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.71,
+      "uncertainty_ir": 0.35,
+      "response_length_chars": 208,
+      "latency_ms": 9.19
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-141",
+    "prompt": "[Variación #141] Listar las versiones activas del software en el clúster de infraestructura.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.95,
+      "uncertainty_ir": 0.49,
+      "response_length_chars": 294,
+      "latency_ms": 13.46
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-136",
+    "prompt": "[Variación #136] Spike crítico en tcp retransmission rate causando caídas de handshake SSL.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.71,
+      "uncertainty_ir": 0.36,
+      "response_length_chars": 214,
+      "latency_ms": 19.49
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-134",
+    "prompt": "[Variación #134] Fallo de conexión por certificados vencidos en el entorno de pruebas.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 20.45,
+      "uncertainty_ir": 0.38,
+      "response_length_chars": 226,
+      "latency_ms": 22.6
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-144",
+    "prompt": "[Variación #144] Mostrar los logs de auditoría generados en los últimos 10 minutos.",
+    "llm_response": "[MOCK LOCAL LLM] Operación completada con éxito. No se registran anomalías en los logs primarios del sistema distribuido. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.5,
+      "uncertainty_ir": 0.41,
+      "response_length_chars": 246,
+      "latency_ms": 12.14
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-149",
+    "prompt": "[Variación #149] Error intermitente en el pipeline de despliegue debido a configuraciones de permisos.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 37.37,
+      "uncertainty_ir": 0.39,
+      "response_length_chars": 233,
+      "latency_ms": 7.56
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-143",
+    "prompt": "[Variación #143] Excepción de timeout en la API de autenticación del contenedor de servicios.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 23.67,
+      "uncertainty_ir": 0.34,
+      "response_length_chars": 203,
+      "latency_ms": 15.64
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-150",
+    "prompt": "[Variación #150] Listar las versiones activas del software en el clúster de infraestructura.",
+    "llm_response": "[MOCK LOCAL LLM] Error operativo detectado en el microservicio. Proceder con reinicio controlado del pod afectado. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.95,
+      "uncertainty_ir": 0.34,
+      "response_length_chars": 204,
+      "latency_ms": 6.47
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  },
+  {
+    "task_id": "TASK-147",
+    "prompt": "[Variación #147] Chequeo básico de salud del sistema mediante ping de red.",
+    "llm_response": "[MOCK LOCAL LLM] Analizado. Se sugiere aplicar un rollback inmediato y verificar la integridad de los índices dañados. Extensión sintética para validación métrica: dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato dato",
+    "metrics": {
+      "semantic_complexity_cs": 16.14,
+      "uncertainty_ir": 0.5,
+      "response_length_chars": 298,
+      "latency_ms": 11.9
+    },
+    "evaluation": {
+      "nc": 0.65,
+      "ien": 45.0,
+      "decision": "LOCAL"
+    }
+  }
+]
