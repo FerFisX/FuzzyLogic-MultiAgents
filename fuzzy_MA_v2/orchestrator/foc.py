@@ -34,6 +34,7 @@ from agents.base import BaseAgent, AgentProposal, TaskRequest
 from audit.auditor import MetricAuditorAgent
 from fie import evaluate, FIEResult
 from orchestrator.complexity import compute_semantic_complexity
+from orchestrator.similarity import SimilarityFn, jaccard_similarity_matrix
 
 logger = logging.getLogger(__name__)
 
@@ -113,6 +114,10 @@ class FuzzyOrchestratorCore:
     timeout_s       : τ — maximum wait for agent responses
     theta           : minimum weight for fusion inclusion
     gamma           : minimum max(W) before declaring irresolvable conflict
+    similarity_fn   : callable(texts) → N×N similarity matrix (Eq. 23).
+                      Defaults to token Jaccard; pass
+                      ``orchestrator.similarity.OllamaEmbeddingSimilarity()``
+                      for true embedding cosine similarity.
     """
 
     def __init__(
@@ -123,6 +128,8 @@ class FuzzyOrchestratorCore:
         timeout_s: float = DEFAULT_TIMEOUT_S,
         theta: float = DEFAULT_THETA,
         gamma: float = DEFAULT_GAMMA,
+        similarity_fn: Optional[SimilarityFn] = None,
+        ien_threshold: float = ESCALATION_IEN_THR,
     ):
         self._agents = {a.agent_id: a for a in agents}
         self._auditor = auditor
@@ -130,6 +137,8 @@ class FuzzyOrchestratorCore:
         self._timeout_s = timeout_s
         self._theta = theta
         self._gamma = gamma
+        self._similarity_fn = similarity_fn or jaccard_similarity_matrix
+        self._ien_threshold = ien_threshold   # set to float("inf") for Pure-Local
         self._lock = threading.Lock()
 
     # ------------------------------------------------------------------
@@ -171,12 +180,12 @@ class FuzzyOrchestratorCore:
 
         # ── Step 5a: Check IEN escalation threshold ──
         max_ien = max(ev.ien for ev in evaluations)
-        if max_ien >= ESCALATION_IEN_THR:
-            reason = f"cognitive insufficiency (max IEN={max_ien:.2f} ≥ {ESCALATION_IEN_THR})"
+        if max_ien >= self._ien_threshold:
+            reason = f"cognitive insufficiency (max IEN={max_ien:.2f} ≥ {self._ien_threshold})"
             return self._escalate(task_id, request, evaluations, weights={}, reason=reason, t0=t0)
 
         # ── Step 6: Weighted fusion ──
-        weights = self._compute_weights(evaluations)
+        weights = self._compute_weights(evaluations, self._similarity_fn)
         max_w = max(weights.values()) if weights else 0.0
 
         if max_w < self._gamma:
@@ -187,18 +196,20 @@ class FuzzyOrchestratorCore:
         final_response = self._fuse(evaluations, weights, self._theta)
         wall_ms = (time.perf_counter() - t0) * 1000.0
 
-        # ── Step 8: Audit ──
-        for ev in evaluations:
-            fh_new = self._auditor.record_outcome(
-                task_id=task_id,
-                agent_id=ev.proposal.agent_id,
-                cs=cs, ir=ev.proposal.response_uncertainty,
-                nc=ev.nc, ien=ev.ien,
-                escalated=False,
-                success=True,                # assume success; caller can update
-                latency_ms=ev.proposal.latency_ms,
-            )
-            logger.debug("Audit | agent=%s FH→%.1f", ev.proposal.agent_id, fh_new)
+        # ── Step 8: Audit ──  (lock: auditor is not thread-safe and the
+        # benchmark drives several process() calls concurrently)
+        with self._lock:
+            for ev in evaluations:
+                fh_new = self._auditor.record_outcome(
+                    task_id=task_id,
+                    agent_id=ev.proposal.agent_id,
+                    cs=cs, ir=ev.proposal.response_uncertainty,
+                    nc=ev.nc, ien=ev.ien,
+                    escalated=False,
+                    success=True,            # assume success; caller can update
+                    latency_ms=ev.proposal.latency_ms,
+                )
+                logger.debug("Audit | agent=%s FH→%.1f", ev.proposal.agent_id, fh_new)
 
         logger.info(
             "FOC | task=%s RESOLVED LOCALLY | wall=%.1f ms | max_w=%.3f",
@@ -260,17 +271,20 @@ class FuzzyOrchestratorCore:
         return evaluations
 
     @staticmethod
-    def _compute_weights(evaluations: List[ProposalEvaluation]) -> Dict[str, float]:
+    def _compute_weights(
+        evaluations: List[ProposalEvaluation],
+        similarity_fn: SimilarityFn = jaccard_similarity_matrix,
+    ) -> Dict[str, float]:
         """
-        Compute normalised consensus weights W_i per Eq. (7) of the paper.
+        Compute normalised consensus weights W_i per Eqs. (23)–(25)
+        of the paper.
 
-        W_i = NC_i · (1 + SP_i) / Σ_k NC_k · (1 + SP_k)
+        W_i = NC_i · (1 + SP_i) / Σ_k NC_k · (1 + SP_k)        (Eq. 25)
 
-        where SP_i = Σ_{j≠i} cos_sim(R_i, R_j) · NC_j
-
-        Note: without sentence-transformers in this release, cosine
-        similarity is approximated by character-level Jaccard similarity
-        over word tokens — sufficient for routing decisions.
+        where SP_i = Σ_{j≠i} s_ij · NC_j                        (Eq. 24)
+        and s_ij is the semantic similarity matrix (Eq. 23) —
+        cosine over embeddings when ``OllamaEmbeddingSimilarity``
+        is injected, token Jaccard otherwise.
         """
         n = len(evaluations)
         if n == 0:
@@ -278,22 +292,8 @@ class FuzzyOrchestratorCore:
         if n == 1:
             return {evaluations[0].proposal.agent_id: 1.0}
 
-        # Build token sets for Jaccard approximation
-        def _tokens(text: str):
-            return set(text.lower().split())
-
-        token_sets = [_tokens(ev.proposal.response_text) for ev in evaluations]
-
-        def _jaccard(a: set, b: set) -> float:
-            u = a | b
-            return len(a & b) / len(u) if u else 0.0
-
-        # Similarity matrix
-        sim = np.zeros((n, n))
-        for i in range(n):
-            for j in range(n):
-                if i != j:
-                    sim[i, j] = _jaccard(token_sets[i], token_sets[j])
+        texts = [ev.proposal.response_text for ev in evaluations]
+        sim = similarity_fn(texts)            # N×N, zero diagonal (Eq. 23)
 
         nc_arr = np.array([ev.nc for ev in evaluations])
 
@@ -366,16 +366,17 @@ class FuzzyOrchestratorCore:
         wall_ms = (time.perf_counter() - t0) * 1000.0
 
         # Audit all agents involved (if any) as escalated
-        for ev in evaluations:
-            self._auditor.record_outcome(
-                task_id=task_id,
-                agent_id=ev.proposal.agent_id,
-                cs=ev.cs, ir=ev.proposal.response_uncertainty,
-                nc=ev.nc, ien=ev.ien,
-                escalated=True,
-                success=False,
-                latency_ms=ev.proposal.latency_ms,
-            )
+        with self._lock:
+            for ev in evaluations:
+                self._auditor.record_outcome(
+                    task_id=task_id,
+                    agent_id=ev.proposal.agent_id,
+                    cs=ev.cs, ir=ev.proposal.response_uncertainty,
+                    nc=ev.nc, ien=ev.ien,
+                    escalated=True,
+                    success=False,
+                    latency_ms=ev.proposal.latency_ms,
+                )
 
         return OrchestratorResult(
             task_id=task_id,

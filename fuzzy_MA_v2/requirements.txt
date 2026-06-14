@@ -5,7 +5,10 @@
 
 # ── Core math (required) ─────────────────────────────────────
 numpy>=1.24.0          # FIE engine — all fuzzy math
-scipy>=1.10.0          # optional statistical utilities
+
+# ── Real agent integration (required for smoke_test / benchmark) ──
+requests>=2.31.0       # Ollama HTTP client (agents + embeddings)
+boto3>=1.34.0          # AWS Bedrock cloud escalation + LLM judge
 
 # ── Visualisation (optional, only needed for demo/paper figures) ──
 matplotlib>=3.7.0      # membership function plots, Pareto figure
@@ -13,15 +16,7 @@ matplotlib>=3.7.0      # membership function plots, Pareto figure
 # ── Testing ──────────────────────────────────────────────────
 pytest>=7.4.0          # test runner
 
-# ── Architecture diagram (v1 generar_arquitectura.py only) ──
-# Kept as optional — not required for the FIE or orchestrator
-# diagrams>=0.23.4
+# ── Optional ─────────────────────────────────────────────────
+# scipy>=1.10.0                 # statistical utilities (not required)
+# diagrams>=0.23.4              # v1 generar_arquitectura.py only
 # Pillow>=10.0.0
-
-# ── Production LLM integration (NOT required for tests/demo) ──
-# These are only needed when wiring real agents to local/cloud LLMs:
-#
-# ollama>=0.1.7                   # local Ollama inference client
-# anthropic>=0.25.0               # AWS Bedrock / Anthropic cloud
-# boto3>=1.34.0                   # AWS Bedrock SDK
-# sentence-transformers>=2.6.0    # cosine similarity for fusion (replaces Jaccard)

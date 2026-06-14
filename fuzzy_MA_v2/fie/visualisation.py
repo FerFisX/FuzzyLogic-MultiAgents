@@ -169,6 +169,36 @@ def plot_evaluation(
     return result
 
 
+def plot_pareto_from_results(
+    results_path: str = "outputs/benchmark_results.json",
+    save_path: Optional[str] = None,
+) -> plt.Figure:
+    """
+    Render the Pareto frontier from REAL benchmark output
+    (``python benchmark.py`` → outputs/benchmark_results.json).
+    """
+    import json
+
+    with open(results_path, encoding="utf-8") as f:
+        data = json.load(f)
+
+    style = {
+        "pure-local":   ("#4CAF50", "o"),
+        "pure-cloud":   ("#F44336", "s"),
+        "fuzzy-hybrid": ("#2196F3", "D"),
+    }
+    configs = {}
+    for m in data["table2_metrics"]:
+        cost = m["costo_usd_por_1k_tareas"]
+        acc = m.get("precision_global_pct") or 0.0
+        colour, marker = style.get(m["config"], ("grey", "o"))
+        label = f"{m['config']}\n({acc:.1f}% / ${cost:.2f})"
+        configs[label] = (cost, acc, colour, marker)
+
+    return _render_pareto(configs, save_path,
+                          subtitle=f"{data['n_tasks']}-task benchmark — real data")
+
+
 def plot_pareto(save_path: Optional[str] = None) -> plt.Figure:
     """
     Render the Pareto frontier figure referenced as Fig. 1 in the paper
@@ -180,26 +210,42 @@ def plot_pareto(save_path: Optional[str] = None) -> plt.Figure:
         "Fuzzy-Hybrid\n(94.1% / $14.21)": (14.21, 94.1, "#2196F3", "D"),
     }
 
+    return _render_pareto(configs, save_path,
+                          subtitle="150-task benchmark — MICAI 2026")
+
+
+def _render_pareto(
+    configs: dict,
+    save_path: Optional[str],
+    subtitle: str,
+) -> plt.Figure:
+    """Shared Pareto renderer: configs = {label: (cost, accuracy, colour, marker)}."""
     fig, ax = plt.subplots(figsize=(7, 5))
 
-    xs = [v[0] for v in configs.values()]
-    ys = [v[1] for v in configs.values()]
+    points = [(x, y) for x, y, _, _ in configs.values()]
 
-    # Draw Pareto frontier line through Fuzzy-Hybrid and Pure-Cloud
-    ax.plot([14.21, 24.50], [94.1, 96.2], "k--", lw=1.5,
-            label="Pareto frontier", zorder=1)
+    # Non-dominated points (higher accuracy and/or lower cost) form the frontier
+    frontier = sorted(
+        p for p in points
+        if not any(q[0] <= p[0] and q[1] >= p[1] and q != p for q in points)
+    )
+    if len(frontier) >= 2:
+        ax.plot([p[0] for p in frontier], [p[1] for p in frontier],
+                "k--", lw=1.5, label="Pareto frontier", zorder=1)
 
     for label, (x, y, colour, marker) in configs.items():
         ax.scatter(x, y, color=colour, marker=marker, s=160, zorder=3)
         ax.annotate(label, (x, y), textcoords="offset points",
                     xytext=(8, -14), fontsize=8)
 
+    xs = [p[0] for p in points]
+    ys = [p[1] for p in points]
     ax.set_xlabel("Operational Cost per 1 000 Tasks (USD)", fontsize=10)
     ax.set_ylabel("Task Resolution Accuracy (%)", fontsize=10)
-    ax.set_title("Pareto Frontier: Accuracy vs. Cost\n(150-task benchmark — MICAI 2026)",
+    ax.set_title(f"Pareto Frontier: Accuracy vs. Cost\n({subtitle})",
                  fontsize=10, fontweight="bold")
-    ax.set_xlim(-2, 28)
-    ax.set_ylim(60, 100)
+    ax.set_xlim(min(xs) - 2, max(xs) + 4)
+    ax.set_ylim(max(0, min(ys) - 10), 100)
     ax.legend(fontsize=8)
     ax.grid(True, alpha=0.3)
     fig.tight_layout()
