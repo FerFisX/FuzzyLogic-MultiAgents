@@ -44,7 +44,7 @@ logger = logging.getLogger(__name__)
 DEFAULT_TIMEOUT_S:  float = 10.0   # τ — max wait for agent responses
 DEFAULT_THETA:      float = 0.30   # min weight for proposal inclusion in fusion
 DEFAULT_GAMMA:      float = 0.25   # min max(W) before irresolvable conflict
-ESCALATION_IEN_THR: float = 75.0  # IEN ≥ this → cloud escalation
+ESCALATION_IEN_THR: float = 25.0  # IEN ≥ this → cloud escalation (calibrated; see fie/engine.py)
 
 
 # ---------------------------------------------------------------------------

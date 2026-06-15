@@ -43,11 +43,20 @@ _COLOURS = {
 }
 
 _TITLES = {
-    "cs":  "CS — Complejidad Semántica  [0, 100]",
-    "ir":  "IR — Incertidumbre Respuesta  [0, 1]",
-    "fh":  "FH — Fiabilidad Histórica  [0, 100]",
-    "nc":  "NC — Nivel de Confianza  [0, 1]",
-    "ien": "IEN — Índice Escalamiento  [0, 100]",
+    "cs":  "CS — Semantic Complexity  [0, 100]",
+    "ir":  "IR — Response Uncertainty  [0, 1]",
+    "fh":  "FH — Historical Reliability  [0, 100]",
+    "nc":  "NC — Trust Level  [0, 1]",
+    "ien": "IEN — Escalation Index  [0, 100]",
+}
+
+# English labels for the linguistic terms (internal keys are Spanish).
+_LABEL_EN = {
+    "baja": "Low", "media": "Medium", "alta": "High",
+    "minima": "Minimal", "moderada": "Moderate", "elevada": "High",
+    "deficiente": "Poor", "aceptable": "Acceptable", "excelente": "Excellent",
+    "bajo": "Low", "medio": "Medium", "alto": "High",
+    "innecesario": "Unnecessary", "condicional": "Conditional", "critico": "Critical",
 }
 
 
@@ -56,11 +65,12 @@ def _plot_single_var(ax: plt.Axes, var: str, crisp_value: Optional[float] = None
     x = np.linspace(*_UNI[var])
     for label, params in _MF[var].items():
         y = _mu(var, label, x)
-        ax.plot(x, y, label=label.capitalize(), color=_COLOURS.get(label, "grey"), lw=2)
+        ax.plot(x, y, label=_LABEL_EN.get(label, label.capitalize()),
+                color=_COLOURS.get(label, "grey"), lw=2)
 
     if crisp_value is not None:
         ax.axvline(crisp_value, color="black", ls="--", lw=1.5,
-                   label=f"valor={crisp_value:.2f}")
+                   label=f"value={crisp_value:.2f}")
 
     ax.set_title(_TITLES[var], fontsize=9, fontweight="bold")
     ax.set_ylim(-0.05, 1.15)
@@ -86,7 +96,8 @@ def plot_membership_functions(
     save_path  : if provided, save to this path instead of showing
     """
     fig, axs = plt.subplots(3, 2, figsize=(13, 9))
-    fig.suptitle("FIE — Membership Functions (MICAI 2026)", fontsize=12, fontweight="bold")
+    fig.suptitle("Fuzzy Inference Engine — Membership Functions",
+                 fontsize=12, fontweight="bold")
     fig.tight_layout(pad=3.5, rect=[0, 0, 1, 0.96])
 
     _plot_single_var(axs[0, 0], "cs",  crisp_value=cs)
@@ -122,8 +133,8 @@ def plot_evaluation(
     fig = plt.figure(figsize=(15, 8))
     fig.suptitle(
         f"FIE Evaluation — CS={cs}  IR={ir}  FH={fh}\n"
-        f"→ NC={result.nc:.3f}  IEN={result.ien:.2f}  "
-        f"({'⚠ ESCALATE' if result.should_escalate else '✓ LOCAL'})  "
+        f"NC={result.nc:.3f}  IEN={result.ien:.2f}  "
+        f"({'ESCALATE' if result.should_escalate else 'LOCAL'})  "
         f"[{result.eval_ms:.2f} ms]",
         fontsize=11, fontweight="bold",
     )
@@ -147,7 +158,8 @@ def plot_evaluation(
                 clipped = np.minimum(alpha, _mu(var, label, x))
                 ax.fill_between(x, clipped, alpha=0.25, color=_COLOURS.get(label, "grey"))
                 ax.plot(x, _mu(var, label, x), "--", lw=1,
-                        color=_COLOURS.get(label, "grey"), label=label)
+                        color=_COLOURS.get(label, "grey"),
+                        label=_LABEL_EN.get(label, label))
                 agg = np.maximum(agg, clipped)
         ax.fill_between(x, agg, alpha=0.35, color="steelblue", label="Aggregated")
         ax.plot(x, agg, color="steelblue", lw=2)
@@ -191,12 +203,15 @@ def plot_pareto_from_results(
     for m in data["table2_metrics"]:
         cost = m["costo_usd_por_1k_tareas"]
         acc = m.get("precision_global_pct") or 0.0
+        runtime_min = (m.get("tiempo_total_config_s") or 0.0) / 60.0
         colour, marker = style.get(m["config"], ("grey", "o"))
-        label = f"{m['config']}\n({acc:.1f}% / ${cost:.2f})"
+        # Label carries accuracy, cost, and the wall-clock runtime of the run
+        label = f"{m['config']}\n{acc:.1f}% / ${cost:.2f} / {runtime_min:.0f} min"
         configs[label] = (cost, acc, colour, marker)
 
     return _render_pareto(configs, save_path,
-                          subtitle=f"{data['n_tasks']}-task benchmark — real data")
+                          subtitle=f"{data['n_tasks']}-task benchmark — real data "
+                                   f"(label: accuracy / cost / wall-clock)")
 
 
 def plot_pareto(save_path: Optional[str] = None) -> plt.Figure:

@@ -98,6 +98,8 @@ class BedrockCloudHandler:
         max_tokens: int = 500,
         temperature: float = 0.2,
         system_prompt: str = _SYSTEM_PROMPT,
+        max_attempts: int = 8,
+        read_timeout: int = 90,
     ):
         self.model_chain = list(model_chain or DEFAULT_MODEL_CHAIN)
         self.max_tokens = max_tokens
@@ -107,17 +109,20 @@ class BedrockCloudHandler:
             "bedrock-runtime",
             region_name=region,
             config=Config(
-                # 8 adaptive attempts: Bedrock on-demand throttles aggressively
-                # under burst load; adaptive mode backs off and retries instead
-                # of failing the task outright (the 19% FAIL rate we saw at
-                # cloud-workers=6 was throttling, not real errors).
-                retries={"max_attempts": 8, "mode": "adaptive"},
+                # High attempts for real task dispatch (Bedrock on-demand
+                # throttles under burst load; adaptive mode backs off and
+                # retries). The judge overrides this with low attempts +
+                # short timeout so a dead model can't stall the run for
+                # 8*read_timeout*len(chain) seconds per evaluation.
+                retries={"max_attempts": max_attempts, "mode": "adaptive"},
                 connect_timeout=15,     # fail fast on degraded networks
-                read_timeout=90,
+                read_timeout=read_timeout,
             ),
         )
         self._records: List[CloudCallRecord] = []
-        self._lock = threading.Lock()
+        # RLock (re-entrant): stats() holds the lock and calls mean_latency_ms,
+        # which re-acquires it. A plain Lock self-deadlocks there.
+        self._lock = threading.RLock()
         self._active_model: Optional[str] = None   # last model that worked
 
     # ------------------------------------------------------------------

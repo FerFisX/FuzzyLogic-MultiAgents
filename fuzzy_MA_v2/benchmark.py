@@ -33,7 +33,7 @@ import statistics
 import sys
 import os
 import time
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor, as_completed, TimeoutError as FuturesTimeout
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -110,7 +110,7 @@ def build_dataset(n_tasks: int) -> List[dict]:
 
 
 # ───────────────────────────────────────────────────────────────────────────
-# 2. LLM JUDGE  (automated accuracy proxy — Amazon Nova Lite, ~$0.06/MTok)
+# 2. LLM JUDGE  (automated accuracy proxy)
 # ───────────────────────────────────────────────────────────────────────────
 _JUDGE_SYSTEM = (
     "Eres un evaluador experto de soporte técnico. Recibirás una INCIDENCIA y "
@@ -119,9 +119,12 @@ _JUDGE_SYSTEM = (
     "una sola palabra: CORRECTA o INCORRECTA."
 )
 
+# Judge runs on the same model family proven to work for task dispatch
+# (Claude Haiku). The earlier Nova-only chain stalled the run for ~48 min
+# because those model IDs were not reachable on this account and the judge
+# retried each one 8x at a 90s timeout. Nova is kept only as last resort.
 _JUDGE_CHAIN = [
-    "us.amazon.nova-2-lite-v1:0",
-    "amazon.nova-2-lite-v1:0",
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0",
     "us.amazon.nova-lite-v1:0",
     "amazon.nova-lite-v1:0",
 ]
@@ -136,15 +139,33 @@ class LLMJudge:
             max_tokens=5,
             temperature=0.0,
             system_prompt=_JUDGE_SYSTEM,
+            max_attempts=3,        # low: a stuck model must fail fast, not stall
+            read_timeout=30,
         )
+        # Dedicated single-thread executor so each judge call can be given a
+        # hard wall-clock deadline via future.result(timeout=...).
+        self._exec = ThreadPoolExecutor(max_workers=1)
 
-    def is_correct(self, task: str, response: str) -> bool:
-        if not response or response.startswith("[LOCAL-FAIL]"):
-            return False
+    def _verdict(self, task: str, response: str) -> bool:
         prompt = f"INCIDENCIA:\n{task}\n\nRESPUESTA:\n{response[:1500]}"
+        verdict = self._handler(prompt).strip().upper()
+        return verdict.startswith("CORRECTA")
+
+    def is_correct(self, task: str, response: str, call_timeout: float = 75.0) -> bool:
+        """
+        Judge one (task, response) pair. Hard-bounded: if the Bedrock call
+        does not return within ``call_timeout`` seconds (e.g. throttling
+        cooldown after a burst), it is abandoned and counted as incorrect
+        so a single stuck call can never freeze the whole benchmark.
+        """
+        if not response or response.startswith(("[LOCAL-FAIL]", "[CLOUD-FAIL]")):
+            return False
+        fut = self._exec.submit(self._verdict, task, response)
         try:
-            verdict = self._handler(prompt).strip().upper()
-            return verdict.startswith("CORRECTA")
+            return fut.result(timeout=call_timeout)
+        except FuturesTimeout:
+            logger.warning("Judge call exceeded %.0fs — counting as incorrect", call_timeout)
+            return False
         except Exception as exc:                     # noqa: BLE001
             logger.warning("Judge failed (%s) — counting as incorrect", exc)
             return False
@@ -163,6 +184,40 @@ def _sa_model() -> str:
     return "gemma3:12b"
 
 
+# Per-task incremental sink: every completed task is appended to a .jsonl
+# immediately, so a crash/hang anywhere (even mid-config) loses nothing.
+_INCREMENTAL_DIR = Path("outputs")
+
+
+def _incremental_path(config_name: str, n_tasks: int) -> Path:
+    return _INCREMENTAL_DIR / f"benchmark_partial_{config_name}_{n_tasks}.jsonl"
+
+
+def _append_record(path: Path, record: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "a", encoding="utf-8") as f:
+        f.write(json.dumps(record, ensure_ascii=False) + "\n")
+        f.flush()
+
+
+def _load_partial(path: Path) -> Dict[str, dict]:
+    """Load already-completed task records keyed by task_id (for resume)."""
+    if not path.exists():
+        return {}
+    done = {}
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                rec = json.loads(line)
+                done[rec["task_id"]] = rec
+            except (json.JSONDecodeError, KeyError):
+                continue
+    return done
+
+
 def _make_local_agents():
     return [
         OllamaEngineeringAgent(),                    # llama3.2 (EA)
@@ -170,7 +225,8 @@ def _make_local_agents():
     ]
 
 
-def run_pure_local(dataset: List[dict], workers: int) -> dict:
+def run_pure_local(dataset: List[dict], workers: int,
+                   partial_path: Optional[Path] = None) -> dict:
     """All tasks resolved locally — FIE consensus active, escalation off."""
     auditor = MetricAuditorAgent()
     foc = FuzzyOrchestratorCore(
@@ -182,14 +238,20 @@ def run_pure_local(dataset: List[dict], workers: int) -> dict:
         gamma=0.0,                                   # never declare conflict
         timeout_s=300.0,
     )
-    records = _run_through_foc(foc, dataset, workers)
+    records = _run_through_foc(foc, dataset, workers, partial_path)
     return {"records": records, "cloud_cost_usd": 0.0, "auditor": auditor.summary()}
 
 
-def run_pure_cloud(dataset: List[dict], workers: int) -> dict:
+def run_pure_cloud(dataset: List[dict], workers: int,
+                   partial_path: Optional[Path] = None) -> dict:
     """Every task sent directly to Bedrock."""
     handler = BedrockCloudHandler()
-    records = []
+    done = _load_partial(partial_path) if partial_path else {}
+    records = list(done.values())
+    pending = [t for t in dataset if t["task_id"] not in done]
+    if done:
+        print(f"      ({len(done)} respuestas ya guardadas, faltan {len(pending)})",
+              flush=True)
 
     def _one(task):
         t0 = time.perf_counter()
@@ -212,12 +274,14 @@ def run_pure_cloud(dataset: List[dict], workers: int) -> dict:
 
     n = len(dataset)
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        futures = [pool.submit(_one, t) for t in dataset]
-        for i, fut in enumerate(as_completed(futures), 1):
+        futures = [pool.submit(_one, t) for t in pending]
+        for fut in as_completed(futures):
             r = fut.result()
             records.append(r)
+            if partial_path:
+                _append_record(partial_path, r)       # persist immediately
             flag = "ok " if r["ok"] else "FAIL"
-            print(f"      [pure-cloud {i:>3}/{n}] {r['task_id']} "
+            print(f"      [pure-cloud {len(records):>3}/{n}] {r['task_id']} "
                   f"({r['categoria_esperada']:<5}) -> NUBE  {flag} "
                   f"{r['wall_ms']/1000:5.1f}s  ${handler.total_cost_usd:.4f}",
                   flush=True)
@@ -226,7 +290,8 @@ def run_pure_cloud(dataset: List[dict], workers: int) -> dict:
             "cloud_stats": handler.stats()}
 
 
-def run_fuzzy_hybrid(dataset: List[dict], workers: int) -> dict:
+def run_fuzzy_hybrid(dataset: List[dict], workers: int,
+                     partial_path: Optional[Path] = None) -> dict:
     """Full paper architecture: FIE + consensus + adaptive Bedrock routing."""
     auditor = MetricAuditorAgent()
     handler = BedrockCloudHandler()
@@ -237,13 +302,19 @@ def run_fuzzy_hybrid(dataset: List[dict], workers: int) -> dict:
         similarity_fn=OllamaEmbeddingSimilarity(),
         timeout_s=300.0,
     )
-    records = _run_through_foc(foc, dataset, workers)
+    records = _run_through_foc(foc, dataset, workers, partial_path)
     return {"records": records, "cloud_cost_usd": handler.total_cost_usd,
             "cloud_stats": handler.stats(), "auditor": auditor.summary()}
 
 
-def _run_through_foc(foc: FuzzyOrchestratorCore, dataset: List[dict], workers: int) -> List[dict]:
-    records = []
+def _run_through_foc(foc: FuzzyOrchestratorCore, dataset: List[dict], workers: int,
+                     partial_path: Optional[Path] = None) -> List[dict]:
+    done = _load_partial(partial_path) if partial_path else {}
+    records = list(done.values())
+    pending = [t for t in dataset if t["task_id"] not in done]
+    if done:
+        print(f"      ({len(done)} tareas ya guardadas, faltan {len(pending)})",
+              flush=True)
 
     def _one(task):
         result = foc.process(task["content"], task_id=task["task_id"])
@@ -273,20 +344,22 @@ def _run_through_foc(foc: FuzzyOrchestratorCore, dataset: List[dict], workers: i
     # Local GPU serialises Ollama calls anyway — keep concurrency modest
     n = len(dataset)
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        futures = [pool.submit(_one, t) for t in dataset]
-        for i, fut in enumerate(as_completed(futures), 1):
+        futures = [pool.submit(_one, t) for t in pending]
+        for fut in as_completed(futures):
             try:
                 r = fut.result()
                 records.append(r)
+                if partial_path:
+                    _append_record(partial_path, r)    # persist immediately
             except Exception as exc:                 # noqa: BLE001
                 logger.error("Task failed: %s", exc)
-                print(f"      [foc {i:>3}/{n}] ERROR: {exc}", flush=True)
+                print(f"      [foc {len(records):>3}/{n}] ERROR: {exc}", flush=True)
                 continue
             route = "NUBE " if r["escalated"] else "LOCAL"
             # show the local agents' fuzzy verdict that drove the routing
             nc = max((e["nc"] for e in r["evaluations"]), default=0.0)
             ien = max((e["ien"] for e in r["evaluations"]), default=0.0)
-            print(f"      [foc {i:>3}/{n}] {r['task_id']} "
+            print(f"      [foc {len(records):>3}/{n}] {r['task_id']} "
                   f"({r['categoria_esperada']:<5}) -> {route} "
                   f"NC={nc:.2f} IEN={ien:4.1f} {r['wall_ms']/1000:5.1f}s",
                   flush=True)
@@ -390,8 +463,9 @@ def main() -> None:
 
     for config in args.configs:
         ckpt_path = ckpt_dir / f"benchmark_ckpt_{config}_{args.tasks}.json"
+        raw_path = ckpt_dir / f"benchmark_raw_{config}_{args.tasks}.json"
 
-        # ── Resume: reuse a completed config from its checkpoint ──
+        # ── Resume: reuse a fully-completed config (responses + judge) ──
         if ckpt_path.exists() and not args.no_resume:
             ckpt = json.loads(ckpt_path.read_text(encoding="utf-8"))
             print(f"  ── Config: {config} — REANUDADA desde checkpoint "
@@ -402,10 +476,31 @@ def main() -> None:
 
         print(f"  ── Config: {config} ──", flush=True)
         workers = args.cloud_workers if config == "pure-cloud" else args.workers
-        t0 = time.perf_counter()
-        run = RUNNERS[config](dataset, workers)
-        elapsed = time.perf_counter() - t0
-        print(f"      completado en {elapsed:.1f} s", flush=True)
+        partial_path = _incremental_path(config, args.tasks)
+
+        # ── Reuse raw responses if a prior run died during the judge step ──
+        if raw_path.exists() and not args.no_resume:
+            raw = json.loads(raw_path.read_text(encoding="utf-8"))
+            run, elapsed = raw["run"], raw["elapsed"]
+            print(f"      respuestas reutilizadas de {raw_path.name} "
+                  f"(no se vuelve a llamar al modelo)", flush=True)
+        else:
+            t0 = time.perf_counter()
+            # partial_path gives per-task incremental persistence + resume
+            run = RUNNERS[config](dataset, workers, partial_path)
+            elapsed = time.perf_counter() - t0
+            print(f"      completado en {elapsed:.1f} s", flush=True)
+            # Persist raw responses BEFORE the judge: a judge stall/crash
+            # must never force re-dispatching (and re-paying for) the model.
+            with open(raw_path, "w", encoding="utf-8") as f:
+                json.dump({"run": run, "elapsed": elapsed}, f, ensure_ascii=False)
+
+        # ── Cooldown before the judge: a config that just fired N cloud calls
+        # leaves the account in a Bedrock throttling window; hitting it again
+        # immediately is what stalled earlier runs. ──
+        if judge is not None and run.get("cloud_cost_usd", 0.0) > 0.0:
+            print("      (enfriando 20s antes del juez para evitar throttling)", flush=True)
+            time.sleep(20)
 
         metrics = compute_metrics(config, run, args.tasks, judge)
         metrics["tiempo_total_config_s"] = round(elapsed, 1)
@@ -416,6 +511,9 @@ def main() -> None:
         # ── Checkpoint: a crash in a later config never loses this one ──
         with open(ckpt_path, "w", encoding="utf-8") as f:
             json.dump({"metrics": metrics, "run": run}, f, ensure_ascii=False)
+        # Config fully done (responses + judge): the per-task partial is
+        # now redundant — remove it so a rerun doesn't half-resume.
+        partial_path.unlink(missing_ok=True)
         print(f"      checkpoint → {ckpt_path.name}", flush=True)
 
     # ── Export ──
